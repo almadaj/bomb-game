@@ -7,7 +7,7 @@ export default function Start() {
   const navigation = useNavigation();
 
   const handleNavToPlaySolo = () => {
-    console.log("jogando solo");
+    navigation.navigate("PlaySolo");
   };
   const handleNavToPlayDuo = () => {
     console.log("jogando duo");
