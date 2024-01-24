@@ -1,8 +1,11 @@
 import React from "react";
 import { Container, Logo, Title, SubTitle, Rules } from "./styles";
 import ButtonComponent from "../../components/Buttons";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Start() {
+  const navigation = useNavigation();
+
   const handleNavToPlaySolo = () => {
     console.log("jogando solo");
   };
@@ -10,7 +13,7 @@ export default function Start() {
     console.log("jogando duo");
   };
   const handleNavToRules = () => {
-    console.log("regras");
+    navigation.navigate("Rules");
   };
   return (
     <Container>

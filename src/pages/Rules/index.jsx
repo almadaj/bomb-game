@@ -8,10 +8,13 @@ import {
   Title,
 } from "./styles";
 import { Alert } from "react-native";
+import { useNavigation } from "@react-navigation/native";
 
 export default function Rules() {
+  const navigation = useNavigation();
+
   function handleNavToStart() {
-    Alert.alert("Ícone clicado");
+    navigation.goBack();
   }
 
   return (
