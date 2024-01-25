@@ -2,10 +2,15 @@ import styled from "styled-components";
 import { RFValue } from "react-native-responsive-fontsize";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
+export const ScrollContainer = styled.ScrollView`
+  flex: 1;
+  background-color: ${({ theme }) => theme.colors.background};
+`;
 export const Container = styled.View`
   flex: 1;
   padding-top: ${getStatusBarHeight() + RFValue(50)}px;
-  background-color: ${({ theme }) => theme.colors.background};
+  padding-bottom: ${getStatusBarHeight() + RFValue(10)}px;
+  /* background-color: ${({ theme }) => theme.colors.background}; */
 `;
 
 export const Title = styled.Text`
@@ -17,7 +22,8 @@ export const Title = styled.Text`
 
 export const BombMessage = styled.Text`
   font-size: ${RFValue(20)}px;
-  padding-bottom: ${RFValue(10)}px;
+  margin: ${RFValue(10)}px 0;
+  margin-bottom: ${RFValue(50)}px;
   text-align: center;
   color: #ff0044;
 `;
