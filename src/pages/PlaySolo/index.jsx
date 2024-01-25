@@ -13,6 +13,7 @@ import { Alert, ImageBackground } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import PasswordInput from "../../components/PasswordInput";
 import ButtonComponent from "../../components/Buttons";
+
 export default function PlaySolo() {
   const navigation = useNavigation();
   function handleStartGame() {

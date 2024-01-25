@@ -10,7 +10,7 @@ export default function Start() {
     navigation.navigate("PlaySolo");
   };
   const handleNavToPlayDuo = () => {
-    console.log("jogando duo");
+    navigation.navigate("PlayDuo");
   };
   const handleNavToRules = () => {
     navigation.navigate("Rules");
