@@ -13,11 +13,11 @@ export default function Routes() {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Exploded" component={Exploded} />
         <Stack.Screen name="Start" component={Start} />
         <Stack.Screen name="Rules" component={Rules} />
         <Stack.Screen name="PlaySolo" component={PlaySolo} />
         <Stack.Screen name="PlayDuo" component={PlayDuo} />
+        <Stack.Screen name="Exploded" component={Exploded} />
         <Stack.Screen name="Disarmed" component={Disarmed} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -1,0 +1,39 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "question": "Qual o ano da 1ª Guerra Mundial?",
+      "answer": "1914"
+    },
+    {
+      "id": 2,
+      "question": "Qual o ano da 2ª Guerra Mundial?",
+      "answer": "1919"
+    },
+    {
+      "id": 3,
+      "question": "Qual o ano Sport Club Internacional ganhou o Mundial Interclubes?",
+      "answer": "2006"
+    },
+    {
+      "id": 4,
+      "question": "Que ano a Inglaterra ganhou sua primeira e única Copa do Mundo?",
+      "answer": "1966"
+    },
+    {
+      "id": 5,
+      "question": "Qual o placar de Brasil x Alemanha na final da Copa do Mundo? Responder(BRA X ALE, 01:00)",
+      "answer": "0200"
+    },
+    {
+      "id": 6,
+      "question": "Qual é considerada a 'Hora do Demônio?'",
+      "answer": "0300"
+    },
+    {
+      "id": 7,
+      "pergunta": "Quais são os 4 primeiros números de PI?",
+      "resp": "3141"
+    }
+  ]
+}
