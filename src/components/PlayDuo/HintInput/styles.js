@@ -11,6 +11,12 @@ export const HintTitle = styled.Text`
   color: ${({ theme }) => theme.colors.white};
   text-decoration-line: underline;
 `;
+export const HintText = styled.Text`
+  font-size: ${RFValue(20)}px;
+  margin-top: ${RFValue(15)}px;
+  font-family: ${({ theme }) => theme.fonts.regular};
+  color: ${({ theme }) => theme.colors.textLight};
+`;
 
 export const InputContainer = styled.View`
   width: ${RFValue(260)}px;

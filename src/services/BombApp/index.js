@@ -71,12 +71,73 @@ export default BombService = {
       navigation.navigate("Disarmed");
       return;
     }
-    setPin(["", "", ""]);
+    setPin(["", "", "", ""]);
     Vibration.vibrate(1000);
     return;
   },
   giveUpGame: ({ intervalId, navigation }) => {
     clearInterval(intervalId);
     navigation.navigate("Exploded");
+  },
+  bombActivationDuo: ({
+    question,
+    pin,
+    hours,
+    minutes,
+    seconds,
+    setMessage,
+    setStarted,
+    setPin,
+    handleStartBomb,
+    answer,
+    setAnswer,
+  }) => {
+    if (question.length < 1) {
+      setMessage("Você precisa dar uma dica!");
+      return;
+    }
+
+    if (pin.join("").length < 4) {
+      setMessage("Senha invalida, complete ela");
+      return;
+    }
+
+    let timeIsSet = false;
+
+    if (hours.length > 0 || minutes.length > 0 || seconds.length > 0) {
+      setStarted(true);
+      timeIsSet = true;
+      setMessage("");
+      handleStartBomb();
+      setAnswer(pin.join(""));
+      setPin(["", "", "", ""]);
+    }
+
+    if (!timeIsSet) {
+      setMessage("Timer invalido, coloque um tempo");
+      return;
+    }
+  },
+
+  bombDisarmDuo: ({
+    pin,
+    answer,
+    setStarted,
+    intervalId,
+    setPin,
+    setAnswer,
+    navigation,
+  }) => {
+    if (pin.join("") === answer) {
+      clearInterval(intervalId);
+      setStarted(false);
+      navigation.navigate("Disarmed");
+      setPin(["", "", ""]);
+      setAnswer("");
+      return;
+    }
+    setPin(["", "", "", ""]);
+    Vibration.vibrate(1000);
+    return;
   },
 };
