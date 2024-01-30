@@ -62,6 +62,10 @@ export default function PlayDuo() {
       setAnswer,
       navigation,
     });
+    console.log(pin[0]);
+    console.log(pin[1]);
+    console.log(pin[2]);
+    console.log(pin[3]);
   }
   function handleGiveUp() {
     BombService.giveUpGame({ intervalId, navigation });
